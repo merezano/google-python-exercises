@@ -45,7 +45,9 @@ def not_bad(s):
 def front_back(a, b):
   a_front = get_front(a)
   b_front = get_front(b)
-  return a_front + b_front + a[len(a_front):] + b[len(b_front):]
+  a_back = a[len(a_front):]
+  b_back = b[len(b_front):]
+  return a_front + b_front + a_back + b_back
 
 def get_front(s):
   if len(s) % 2 == 0:
