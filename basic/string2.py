@@ -29,9 +29,11 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-  # +++your code here+++
-  return
-
+  not_occurrence_pos = s.find('not');
+  bad_occurrence_pos = s.find('bad');
+  if not_occurrence_pos != -1 and bad_occurrence_pos != -1 and not_occurrence_pos < bad_occurrence_pos:
+    s = s[:not_occurrence_pos] +'good' + s [bad_occurrence_pos+3:]
+  return s
 
 # F. front_back
 # Consider dividing a string into two halves.
